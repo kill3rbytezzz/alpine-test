@@ -9,4 +9,5 @@ LABEL maintainer="peter@linuxcontainers.dev" \
 RUN /sbin/apk update --no-cache \
     && /sbin/apk upgrade --no-cache \
     && /bin/rm -rf /var/cache/apk/*
+RUN set -ex && apk --no-cache add sudo curl git
 CMD ["/bin/sh"]
