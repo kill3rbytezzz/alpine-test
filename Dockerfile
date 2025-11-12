@@ -4,10 +4,10 @@
 FROM alpine:3.20
 LABEL maintainer="peter@linuxcontainers.dev" \
     org.opencontainers.image.authors="Peter, peter@linuxcontainers.dev, https://www.linuxcontainers.dev/" \
-    org.opencontainers.image.source="https://github.com/linuxcontainers/alpine" \
-    org.opencontainers.image.title="alpine" 
+    org.opencontainers.image.source="https://github.com/kill3rbytezzz/alpine-test" \
+    org.opencontainers.image.title="alpine-test" 
 RUN /sbin/apk update --no-cache \
     && /sbin/apk upgrade --no-cache \
     && /bin/rm -rf /var/cache/apk/*
-RUN set -ex && apk --no-cache add sudo curl git
+RUN set -ex && apk --no-cache add sudo curl git bash
 CMD ["/bin/sh"]
